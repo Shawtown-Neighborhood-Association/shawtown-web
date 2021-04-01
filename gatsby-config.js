@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Shawtown Neighborhood Association",
   },
+  pathPrefix: "/shawtown-web",
   plugins: [
     "gatsby-plugin-sass",
     {
