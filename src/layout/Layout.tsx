@@ -1,7 +1,8 @@
 import React, { ReactChild } from 'react';
 import Footer from './Footer/Footer';
-import "@fortawesome/fontawesome-free/scss/brands.scss";
+import Header from './Header/Header';
 
+import "@fortawesome/fontawesome-free/scss/brands.scss";
 import './Layout.scss';
 
 export interface LayoutProps {
@@ -12,7 +13,7 @@ export interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = (props) => {
     return (
         <div>
-            <h1>Header - {props.title}</h1>
+            <Header />
             {props.children}
             <Footer />
         </div>
