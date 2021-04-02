@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticRouteUrls } from '../../Routes';
 
 import * as styles from './Footer.module.scss';
 
@@ -10,14 +11,14 @@ const Footer: React.FC = () => {
                     <div className="col-sm">
                         <h1>About Shawtown</h1>
                         <p>
-                            Shawtown is a historic neighborhood located in the southwest corner of Eau Claire, WI and 
+                            Shawtown is a historic neighborhood located in the southwest corner of Eau Claire, WI and
                             is rooted in lumber, traditions and a close-knit community. The Shawtown Neighborhood Association
                             was formed in 2019.
                         </p>
                         <p className={styles.social}>
-                            <a href="http://www.google.com" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a>
-                            <a href="http://www.google.com" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
-                            <a href="http://www.google.com" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+                          <a href={StaticRouteUrls.socialMedia.facebook()} target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a>
+                          <a href={StaticRouteUrls.socialMedia.twitter()} target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
+                          <a href={StaticRouteUrls.socialMedia.instagram()} target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
                         </p>
                     </div>
                     <div className="col-sm">
@@ -54,7 +55,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
             </div>
-            
+
         </footer>
     )
 }

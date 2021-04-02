@@ -1,7 +1,7 @@
 import React from 'react';
+import { StaticRouteUrls } from '../../Routes';
 
 import * as styles from './Hero.module.scss';
-
 
 export interface HeroProps {
     title: string;
@@ -18,9 +18,9 @@ export const Hero: React.FC<HeroProps> = props => {
                     <div className={styles.socialMedia}>
                         {(!props.includeSocialMedia || props.includeSocialMedia === true) &&
                             <>
-                                <a href="https://www.google.com" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a>
-                                <a href="https://www.google.com" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
-                                <a href="https://www.google.com" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+                                <a href={StaticRouteUrls.socialMedia.facebook()} target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a>
+                                <a href={StaticRouteUrls.socialMedia.twitter()} target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
+                                <a href={StaticRouteUrls.socialMedia.instagram()} target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
                             </>
                         }
                     </div>
