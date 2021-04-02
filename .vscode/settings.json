@@ -1,0 +1,6 @@
+{
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "scss.validate": true,
+  "scss.lint.validProperties": ["composes"]
+}
