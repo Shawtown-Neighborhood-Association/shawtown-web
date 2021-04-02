@@ -27,6 +27,15 @@ module.exports = {
           "G-YZYEKSE7G4"
         ]
       }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Shawtown Neighborhood Association',
+        short_name: 'Shawtown',
+        start_url: '/',
+        icon: 'src/images/icon.png'
+      }
     }
   ],
 };
