@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Hero } from "../components/Hero";
 import { Layout } from '../layout/Layout';
 
 // markup
@@ -14,8 +15,9 @@ const IndexPage = () => {
   return (
     <Layout title="Brad Candell">
       <>
+        <Hero title="Contact Us" lead="Get in touch with us" />
         <div className="container">
-          <h1>Home Page</h1>
+
           <ul>
             {items}
           </ul>
