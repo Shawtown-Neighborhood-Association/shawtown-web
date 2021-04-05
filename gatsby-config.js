@@ -19,20 +19,20 @@ module.exports = {
       },
       __key: "pages",
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "agendas",
-        path: `${__dirname}/src/meetings/agendas/`
-      },
-      __key: "agendas",
-    },
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: `${__dirname}/src/meetings/agendas`,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "agendas",
+    //     path: `${__dirname}/src/meetings/agendas/`
+    //   },
+    //   __key: "agendas",
+    // },
+    // {
+    //   resolve: "gatsby-plugin-page-creator",
+    //   options: {
+    //     path: `${__dirname}/src/meetings/agendas`,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
