@@ -1,3 +1,4 @@
+import { url } from 'node:inspector';
 import React from 'react';
 import { StaticRouteUrls } from '../../Routes';
 
@@ -11,8 +12,9 @@ export interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = props => {
+
     return (
-        <div className={styles.container}>
+        <div className={styles.wrapper} style={{ backgroundImage: props.image ? `url('${props.image}')` : undefined }}>
             <div className="container">
                 <div className={styles.hero}>
                     <div className={styles.socialMedia}>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Hero } from '../components/Hero';
 import { Section } from '../components/Section';
 import { Layout } from '../layout/Layout';
 
@@ -6,7 +7,7 @@ const About = () => {
   return (
     <Layout title="About the Shawtown Neighborhood Association">
       <>
-        <h1>About Us</h1>
+        <Hero title="Neighborhood Association" lead="Learn more about the" />
         <Section id="brad">
           <div className="row">
             <div className="col-sm">
