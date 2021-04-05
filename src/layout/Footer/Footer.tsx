@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import { StaticRouteUrls } from '../../Routes';
 
@@ -50,7 +51,7 @@ const Footer: React.FC = () => {
                 <div className="row">
                     <div className="col-sm">
                         <div className={styles.copyright}>
-                            Copyright &copy; {new Date().getFullYear()} - <a href="#top">All Rights Reserved</a>
+                            Copyright &copy; {new Date().getFullYear()} - <Link to={StaticRouteUrls.privacy()}>All Rights Reserved</Link>
                         </div>
                     </div>
                 </div>

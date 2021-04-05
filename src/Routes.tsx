@@ -20,6 +20,13 @@ export const StaticRouteUrls = {
 }
 
 export const StaticRouteLinks = {
-  home: <Link to='/'>Home</Link>,
-  about: <Link to='/about/'>About</Link>
+  Home: () => <Link to={StaticRouteUrls.home()}>Home</Link>,
+  About: () => <Link to={StaticRouteUrls.about()}>About</Link>,
+  People: () => <Link to={StaticRouteUrls.people()}>People</Link>,
+  Documents: () => <Link to={StaticRouteUrls.documents()}>Documents</Link>,
+  Events: () => <Link to={StaticRouteUrls.events()}>Events</Link>,
+  Meetings: () => <Link to={StaticRouteUrls.meetings()}>Meetings</Link>,
+  Projects: () => <Link to={StaticRouteUrls.projects()}>Projects</Link>,
+  Contact: () => <Link to={StaticRouteUrls.contact()}>Contact</Link>,
+  Privacy: () => <Link to={StaticRouteUrls.privacy()}>Privacy Policy</Link>
 }
