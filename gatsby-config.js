@@ -5,13 +5,12 @@ module.exports = {
   pathPrefix: "/shawtown-web",
   plugins: [
     "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
-    "gatsby-plugin-mdx",
+    // {
+    //   resolve: "gatsby-plugin-manifest",
+    //   options: {
+    //     icon: "src/images/icon.png",
+    //   },
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -19,6 +18,20 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "agendas",
+        path: `${__dirname}/src/meetings/agendas/`
+      },
+      __key: "agendas",
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/meetings/agendas`,
+      },
     },
     {
       resolve: "gatsby-plugin-google-gtag",
@@ -35,6 +48,15 @@ module.exports = {
         short_name: 'Shawtown',
         start_url: '/',
         icon: 'src/images/icon.png'
+      }
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        defaultLayouts: {
+          pages: require.resolve('./src/layout/Layout.tsx'),
+          default: require.resolve('./src/layout/Layout.tsx')
+        }
       }
     }
   ],

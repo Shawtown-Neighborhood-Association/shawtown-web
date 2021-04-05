@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-free/scss/brands.scss";
 import './Layout.scss';
 
 export interface LayoutProps {
-    title: string;
+    title?: string;
     children?: ReactChild;
 }
 
@@ -19,3 +19,5 @@ export const Layout: React.FC<LayoutProps> = (props) => {
         </div>
     )
 }
+
+export default Layout;
