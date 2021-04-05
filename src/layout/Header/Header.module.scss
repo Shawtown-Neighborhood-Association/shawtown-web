@@ -18,22 +18,28 @@
       font-size: 1.1rem;
       color: $color-primary;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $color-secondary;
         text-decoration: none;
       }
 
-      &[aria-current="page"] {
+      &[aria-current='page'] {
         color: red;
       }
     }
 
     .brand {
-      font-family: "Cooper Hewitt";
+      font-family: 'Cooper Hewitt';
       font-size: 1.3rem;
       color: $color-primary;
       padding-left: 0;
       padding-right: 2.5rem;
+
+      &[aria-current='page'] {
+        color: $color-primary;
+      }
+
     }
   }
 }
