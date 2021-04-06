@@ -1,0 +1,58 @@
+@import '../../scss/variables';
+
+.wrapper {
+  text-align: center;
+  padding: 0.6rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: calc(64rem / 4 - (0.6rem * 2));
+
+  .image {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+
+    > i {
+      font-size: 11.5rem;
+      color: lighten($color: $color-primary, $amount: 60)
+    }
+  }
+
+  .name {
+    font-size: 1rem;
+    color: $color-black;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .title {
+    font-size: 0.875rem;
+    color: $color-secondary;
+    font-style: italic;
+    margin-bottom: 0.25rem;
+  }
+
+  .residentSince {
+    font-size: 0.6rem;
+    color: $color-secondary;
+  }
+
+  .biography {
+    font-size: 0.775rem;
+    color: lighten($color-black, 60);
+    margin: 0;
+    margin-bottom: 0.25rem;
+    padding: 0;
+  }
+
+}

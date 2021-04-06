@@ -31,6 +31,17 @@ h4 {
   font-family: $primaryFontFamily;
 }
 
+h1 {
+  font-size: 2.15rem;
+  color: $color-primary;
+}
+
+h2 {
+  font-family: $secondaryFontFamily;
+  font-size: 1.15rem;
+  color: transparentize($color: $color-primary, $amount: 0.50)
+}
+
 @media (prefers-reduced-motion: reduce) {
   body {
     transition: none;
