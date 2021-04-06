@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: "Shawtown Neighborhood Association",
+    title: "Shawtown Neighborhood Association"
   },
   pathPrefix: "/shawtown-web",
   plugins: [
     "gatsby-plugin-sass",
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -45,7 +47,6 @@ module.exports = {
         start_url: '/',
         icon: 'src/images/icon.png'
       }
-    },
-    "gatsby-plugin-mdx"
+    }
   ],
 };

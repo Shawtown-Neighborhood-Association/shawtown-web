@@ -5,7 +5,7 @@ import { Layout } from '../layout/Layout';
 
 const About = () => {
   return (
-    <Layout title="About the Shawtown Neighborhood Association">
+    <Layout title="About the Shawtown Neighborhood Association" description="">
       <>
         <Hero title="Neighborhood Association" lead="Learn more about the" />
         <Section id="brad">

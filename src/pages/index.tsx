@@ -13,7 +13,7 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout title="Brad Candell">
+    <Layout title="Home" description="">
       <>
         <Hero title="Contact Us" lead="Get in touch with us" />
         <div className="container">

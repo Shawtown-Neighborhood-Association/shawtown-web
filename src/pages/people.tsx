@@ -9,7 +9,7 @@ import * as styles from './scss/people.module.scss';
 
 const People = () => {
   return (
-    <Layout title="People">
+    <Layout title="People" description="">
       <>
         <Hero title="Neighborhood Association" lead="Meet the" />
 

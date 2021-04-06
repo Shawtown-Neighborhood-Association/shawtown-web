@@ -3,7 +3,7 @@ import { Layout } from '../layout/Layout';
 
 const Meetings = () => {
   return (
-    <Layout title="Meetings">
+    <Layout title="Meetings" description="">
       <h1>Meetings</h1>
     </Layout>
   )

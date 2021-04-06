@@ -6,7 +6,7 @@ export default function MeetingAgendaTemplate(props: any) {
   console.log('Agenda Data', props.data);
 
   return (
-    <Layout title="Meeting Agenda">
+    <Layout title="Meeting Agenda" description="">
       <div>
         <h1>Meeting Agenda Template {JSON.stringify(props.data)}</h1>
         <h2>Brad</h2>

@@ -11,7 +11,7 @@ const Contact = () => {
   const emailAddress = "info@shawtown.org";
 
   return (
-    <Layout title="Contact Us">
+    <Layout title="Contact Us" description="">
       <>
         <Hero title="Contacts" lead="Get in touch with us" />
 
