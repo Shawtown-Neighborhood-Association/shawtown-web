@@ -1,26 +1,38 @@
-@import "~bootstrap/scss/bootstrap.scss";
-@import "../scss/variables";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap");
+@import '~bootstrap/scss/bootstrap.scss';
+@import '../scss/variables';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
 
 @font-face {
-    font-family: "Cooper Hewitt";
-    src: local("Cooper Hewitt"),
-      url(../fonts/CooperHewitt-Bold.otf) format("opentype");
+  font-family: 'Cooper Hewitt';
+  src: local('Cooper Hewitt'),
+  url(../fonts/CooperHewitt-Bold.otf) format('opentype');
+}
+
+body {
+  font-family: $secondaryFontFamily;
+  transition: all 0.6s ease-in-out left right;
+  line-height: 1.5rem;
+  height: 100%;
+  margin-top: 1.875rem;
+}
+
+a {
+  &:hover,
+  &:focus {
+    transition: all 0.3s ease-in-out;
   }
-  
+}
+
+@media (prefers-reduced-motion: reduce) {
   body {
-    font-family: "Roboto Slab", serif;
-    transition-property: left, right;
-    transition: all 0.6s ease-in-out;
-    line-height: 1.5rem;
-    height: 100%;
-    margin-top: 1.875rem;
+    transition: none;
   }
-  
+
   a {
-    &:hover {
-      transition: all 0.3s ease-in-out;
-    }
+   &:hover,
+   &:focus {
+     transition: none;
+   }
   }
-  
+}

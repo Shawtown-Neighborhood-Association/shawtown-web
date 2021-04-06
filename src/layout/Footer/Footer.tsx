@@ -17,9 +17,9 @@ const Footer: React.FC = () => {
                             was formed in 2019.
                         </p>
                         <p className={styles.social}>
-                          <a href={StaticRouteUrls.socialMedia.facebook()} target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a>
-                          <a href={StaticRouteUrls.socialMedia.twitter()} target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
-                          <a href={StaticRouteUrls.socialMedia.instagram()} target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+                          <a href={StaticRouteUrls.socialMedia.facebook()} target="_blank" rel="noreferrer" className={styles.socialAnchor}><i className="fab fa-facebook-f"></i></a>
+                          <a href={StaticRouteUrls.socialMedia.twitter()} target="_blank" rel="noreferrer" className={styles.socialAnchor}><i className="fab fa-twitter"></i></a>
+                          <a href={StaticRouteUrls.socialMedia.instagram()} target="_blank" rel="noreferrer" className={styles.socialAnchor}><i className="fab fa-instagram"></i></a>
                         </p>
                     </div>
                     <div className="col-sm">
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
                 <div className="row">
                     <div className="col-sm">
                         <div className={styles.copyright}>
-                            Copyright &copy; {new Date().getFullYear()} - <Link to={StaticRouteUrls.privacy()}>All Rights Reserved</Link>
+                            Copyright &copy; {new Date().getFullYear()} - <Link to={StaticRouteUrls.privacy()} className={styles.privacyAnchor}>All Rights Reserved</Link>
                         </div>
                     </div>
                 </div>

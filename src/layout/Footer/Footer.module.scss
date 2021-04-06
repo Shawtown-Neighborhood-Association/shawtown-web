@@ -1,9 +1,10 @@
-@import "../../scss/variables";
+@import '../../scss/variables';
 
 $footer-foreground: #828282;
+$footer-background: #262626;
 
 .footer {
-  background-color: #262626;
+  background-color: $footer-background;
   color: $footer-foreground;
   font-size: 0.75rem;
   line-height: 1.4;
@@ -12,7 +13,7 @@ $footer-foreground: #828282;
 
   & h1 {
     font-size: 1.125rem;
-    color: white;
+    color: $color-white;
     padding-bottom: 1.25rem;
   }
 
@@ -21,14 +22,15 @@ $footer-foreground: #828282;
     padding: 0;
     margin: 0;
 
-    & a {
+    a {
       font-size: 0.83rem;
       color: $color-secondary;
       padding: 0.4rem 0;
       text-decoration: none;
       display: inline-block;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $color-white;
       }
     }
@@ -37,23 +39,25 @@ $footer-foreground: #828282;
   .copyright {
     padding-top: 2.5rem;
 
-    & a {
+    a.privacyAnchor {
       color: $footer-foreground;
       text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $color-secondary;
       }
     }
   }
 
   .social {
-    & a {
+    .socialAnchor {
       font-size: 0.85rem;
       color: $color-white;
       margin-right: 1.75rem;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $color-secondary;
       }
     }

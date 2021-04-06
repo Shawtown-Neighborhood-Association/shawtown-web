@@ -1,4 +1,3 @@
-import { url } from 'node:inspector';
 import React from 'react';
 import { StaticRouteUrls } from '../../Routes';
 
@@ -6,7 +5,7 @@ import * as styles from './Hero.module.scss';
 
 export interface HeroProps {
     title: string;
-    lead: string;
+    lead?: string;
     image?: string;
     includeSocialMedia?: boolean;
 }
@@ -27,7 +26,9 @@ export const Hero: React.FC<HeroProps> = props => {
                         }
                     </div>
                     <div className={styles.titles}>
-                        <h2 className={styles.lead}>{props.lead}</h2>
+                        {props.lead &&
+                          <h2 className={styles.lead}>{props.lead}</h2>
+                        }
                         <h1 className={styles.title}>{props.title}</h1>
                     </div>
                 </div>

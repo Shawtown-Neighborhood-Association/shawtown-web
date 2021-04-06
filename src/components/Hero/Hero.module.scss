@@ -29,14 +29,14 @@
       }
 
       .lead {
-        font-family: 'Roboto Slab', sans-serif;
+        font-family: $secondaryFontFamily;
         font-weight: 400;
         font-size: 1rem;
       }
 
       .title {
         margin-top: 1.3rem;
-        font-family: 'Cooper Hewitt', sans-serif;
+        font-family: $primaryFontFamily;
         font-size: 3.75rem;
       }
     }

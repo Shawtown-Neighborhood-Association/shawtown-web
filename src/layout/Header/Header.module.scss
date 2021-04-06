@@ -1,4 +1,4 @@
-@import "../../scss/variables";
+@import '../../scss/variables';
 
 .header {
   background-color: $color-white;
@@ -30,7 +30,7 @@
     }
 
     .brand {
-      font-family: 'Cooper Hewitt';
+      font-family: $primaryFontFamily;
       font-size: 1.3rem;
       color: $color-primary;
       padding-left: 0;

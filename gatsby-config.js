@@ -5,12 +5,6 @@ module.exports = {
   pathPrefix: "/shawtown-web",
   plugins: [
     "gatsby-plugin-sass",
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   options: {
-    //     icon: "src/images/icon.png",
-    //   },
-    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -19,20 +13,22 @@ module.exports = {
       },
       __key: "pages",
     },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "agendas",
-    //     path: `${__dirname}/src/meetings/agendas/`
-    //   },
-    //   __key: "agendas",
-    // },
-    // {
-    //   resolve: "gatsby-plugin-page-creator",
-    //   options: {
-    //     path: `${__dirname}/src/meetings/agendas`,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "agendas",
+        path: `${__dirname}/src/meetings/agendas/`
+      },
+      __key: "agendas",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "minutes",
+        path: `${__dirname}/src/meetings/minutes/`
+      },
+      __key: "minutes",
+    },
     {
       resolve: "gatsby-plugin-google-gtag",
       options: {
@@ -50,14 +46,6 @@ module.exports = {
         icon: 'src/images/icon.png'
       }
     },
-    {
-      resolve: "gatsby-plugin-mdx",
-      options: {
-        defaultLayouts: {
-          pages: require.resolve('./src/layout/Layout.tsx'),
-          default: require.resolve('./src/layout/Layout.tsx')
-        }
-      }
-    }
+    "gatsby-plugin-mdx"
   ],
 };
