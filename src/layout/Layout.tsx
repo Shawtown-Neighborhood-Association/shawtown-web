@@ -3,6 +3,7 @@ import Footer from './Footer/Footer';
 import Header from './Header/Header';
 
 import "@fortawesome/fontawesome-free/scss/brands.scss";
+import "@fortawesome/fontawesome-free/scss/solid.scss";
 import './Layout.scss';
 
 export interface LayoutProps {
