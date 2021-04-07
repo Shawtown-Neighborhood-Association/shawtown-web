@@ -5,8 +5,7 @@
 
 @font-face {
   font-family: 'Cooper Hewitt';
-  src: local('Cooper Hewitt'),
-  url(../fonts/CooperHewitt-Bold.otf) format('opentype');
+  src: local('Cooper Hewitt'), url(../fonts/CooperHewitt-Bold.otf) format('opentype');
 }
 
 body {
@@ -39,7 +38,7 @@ h1 {
 h2 {
   font-family: $secondaryFontFamily;
   font-size: 1.15rem;
-  color: transparentize($color: $color-primary, $amount: 0.50)
+  color: transparentize($color: $color-primary, $amount: 0.5);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -48,9 +47,9 @@ h2 {
   }
 
   a {
-   &:hover,
-   &:focus {
-     transition: none;
-   }
+    &:hover,
+    &:focus {
+      transition: none;
+    }
   }
 }
