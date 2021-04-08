@@ -30,9 +30,12 @@ $footer-background: #262626;
       text-decoration: none;
       display: inline-block;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: $color-white;
+      }
+
+      &:focus {
+        color: $color-secondary;
       }
     }
   }
