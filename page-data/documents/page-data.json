@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-documents-tsx","path":"/documents/","result":{"pageContext":{}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-pages-documents-tsx","path":"/documents/","result":{"data":{"allMdx":{"edges":[{"node":{"frontmatter":{"author":"Barbara Arnold","title":"Bylaws"},"fields":{"source":"documents","slug":"/documents/Bylaws/"}}}]}},"pageContext":{}},"staticQueryHashes":[]}
