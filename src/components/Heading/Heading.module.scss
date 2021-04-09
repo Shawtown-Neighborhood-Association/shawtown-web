@@ -1,0 +1,31 @@
+@import '../../scss/variables';
+@import '~include-media/dist/include-media';
+
+.wrapper {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.heading {
+  display: inline-block;
+  color: $color-white;
+  background-color: $brand-primary-green;
+  font-family: $secondaryFontFamily;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem 0.5rem 0.75rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin: 0.75rem 0;
+  position: relative;
+  left: calc(50% * -1);
+  padding-left: calc(50% + 0.5rem);
+}
+
+@include media('<=desktop') {
+  .heading {
+    left: calc(35% * -1);
+    padding-left: calc(35% + 0.5rem);
+  }
+}

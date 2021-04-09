@@ -1,48 +1,30 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Shawtown Neighborhood Association
 
-## 🚀 Quick start
+<div style="float: right; background-color: white;">
 
-1.  **Create a Gatsby site.**
+![logo](https://shawtown-neighborhood-association.github.io/shawtown-web/icons/icon-192x192.png)
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+</div>
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+This repository contains the source code for the Shawtown Neighborhood Association's public-facing website (www.shawtown.org). Located in Eau Claire (Wisconsin), the Shawtown Neighborhood Association boasts a community with nearly 600 residences and over a century of history rooted in the lumber industry.
 
-2.  **Start developing.**
+The project was built using the [Gatsby](https://www.gatsbyjs.com/) framework to generate a static, React-based website.
 
-    Navigate into your new site’s directory and start it up.
+## Our Culture
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+> An association that actively collaborates to foster support, safety, and growth to enhance the Shawtown neighborhood for everyone.
 
-3.  **Open the code and start customizing!**
+## Contributing
 
-    Your site is now running at http://localhost:8000!
+Contributions from throughout development community are welcomed and encouraged. Contribution guidelines will evolve as more developers become involved.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+### Technologies
 
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- [Gatsby](https://www.gatsbyjs.com/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org/)
+- [ESLint](https://eslint.org/) / [Stylelint](https://stylelint.io/)
+- [Prettier](https://prettier.io/)
+- [Markdown](https://daringfireball.net/projects/markdown/) / [MDX](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/)

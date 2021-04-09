@@ -2,8 +2,11 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { format } from 'date-fns';
+import { Heading } from '../components/Heading';
 import { Section } from '../components/Section';
 import Layout from '../layout/Layout';
+
+import * as styles from './MeetingAgenda.module.scss';
 
 export default function MeetingAgendaTemplate(props: any) {
   const { data } = props;
@@ -14,72 +17,78 @@ export default function MeetingAgendaTemplate(props: any) {
   return (
     <Layout title="Meeting Agenda" description="">
       <>
-        <Section>
-
+        <Section className={styles.heading}>
           <h1>Meeting Notice &amp; Agenda</h1>
           <h2>{mdx.frontmatter.type} Meeting</h2>
-          <table>
+          <table className={styles.headingTable}>
             <tbody>
               <tr>
-                <td>Date:</td>
-                <td>{format(startDate, "EEEE, MMMM do, yyyy")}</td>
+                <td className={styles.label}>Date:</td>
+                <td className={styles.value}>{format(startDate, 'EEEE, MMMM do, yyyy')}</td>
               </tr>
               <tr>
-                <td>Time:</td>
-                <td>{format(startDate, "h:mm aaa")} - {format(endDate, "h:mm aaa")}</td>
+                <td className={styles.label}>Time:</td>
+                <td className={styles.value}>
+                  {format(startDate, 'h:mm aaa')} - {format(endDate, 'h:mm aaa')}
+                </td>
               </tr>
               <tr>
-                <td>Location:</td>
-                <td>{mdx.frontmatter.location}</td>
+                <td className={styles.label}>Location:</td>
+                <td className={styles.value}>{mdx.frontmatter.location}</td>
               </tr>
               <tr>
                 <td colSpan={2}>&nbsp;</td>
               </tr>
               <tr>
-                <td>Meeting ID:</td>
-                <td>{mdx.frontmatter.meetingID}</td>
+                <td className={styles.label}>Meeting ID:</td>
+                <td className={styles.value}>{mdx.frontmatter.meetingID}</td>
               </tr>
               <tr>
-                <td>Passcode:</td>
-                <td>{mdx.frontmatter.meetingPasscode}</td>
+                <td className={styles.label}>Passcode:</td>
+                <td className={styles.value}>{mdx.frontmatter.meetingPasscode}</td>
               </tr>
               <tr>
-                <td>Connect via:</td>
-                <td>Voice / Phone: {mdx.frontmatter.meetingPhone}</td>
+                <td className={styles.label}>Connect via:</td>
+                <td className={styles.value}>
+                  Voice / Phone:{' '}
+                  <a href={`tel:${mdx.frontmatter.meetingPhone.replace(' ', '')}`}>{mdx.frontmatter.meetingPhone}</a>
+                </td>
               </tr>
               <tr>
                 <td></td>
-                <td>Computer / Smartphone / Tablet<br />{mdx.frontmatter.meetingUrl}</td>
+                <td className={styles.value}>
+                  Computer / Smartphone / Tablet
+                  <br />
+                  <a href={mdx.frontmatter.meetingUrl}>{mdx.frontmatter.meetingUrl}</a>
+                </td>
               </tr>
             </tbody>
           </table>
-
         </Section>
         <Section>
-          <h3>Meeting Agenda</h3>
+          <Heading>Meeting Agenda</Heading>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Section>
       </>
     </Layout>
-  )
+  );
 }
 
 export const pageQuery = graphql`
-query GetMeetingAgenda($slug: String!) {
-  mdx(fields: {slug: {eq: $slug}}) {
-    frontmatter {
-      starts
-      ends
-      type
-      location
-      meetingID
-      meetingPasscode
-      meetingPhone
-      meetingUrl
-      author
+  query GetMeetingAgenda($slug: String!) {
+    mdx(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        starts
+        ends
+        type
+        location
+        meetingID
+        meetingPasscode
+        meetingPhone
+        meetingUrl
+        author
+      }
+      body
     }
-    body
   }
-}
-
-`
+`;

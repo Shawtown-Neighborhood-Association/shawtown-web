@@ -1,7 +1,31 @@
+@import '../../scss/variables';
+
 .officers {
   background-color: #f2f2f2;
+
+  h1 {
+    font-size: 2.15rem;
+    color: $color-primary;
+  }
+
+  h2 {
+    font-family: $secondaryFontFamily;
+    font-size: 1.15rem;
+    color: transparentize($color: $color-primary, $amount: 0.5);
+  }
 }
 
 .atLarge {
   background-color: white;
+
+  h1 {
+    font-size: 2.15rem;
+    color: $color-primary;
+  }
+
+  h2 {
+    font-family: $secondaryFontFamily;
+    font-size: 1.15rem;
+    color: transparentize($color: $color-primary, $amount: 0.5);
+  }
 }
