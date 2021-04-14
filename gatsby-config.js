@@ -5,8 +5,11 @@ module.exports = {
   pathPrefix: '/shawtown-web',
   plugins: [
     'gatsby-plugin-sass',
-    'gatsby-plugin-mdx',
     'gatsby-plugin-react-helmet',
+    'gatsby-remark-images',
+    {
+      resolve: 'gatsby-plugin-mdx'
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

@@ -5,6 +5,7 @@ import { format } from 'date-fns';
 import { Heading } from '../components/Heading';
 import { Section } from '../components/Section';
 import Layout from '../layout/Layout';
+import logo from '../images/icon.png';
 
 import * as styles from './MeetingAgenda.module.scss';
 
@@ -18,6 +19,7 @@ export default function MeetingAgendaTemplate(props: any) {
     <Layout title="Meeting Agenda" description="">
       <>
         <Section className={styles.heading}>
+          <img src={logo} alt="Shawtown Neighborhood Association" className={styles.logo} />
           <h1>Meeting Notice &amp; Agenda</h1>
           <h2>{mdx.frontmatter.type} Meeting</h2>
           <table className={styles.headingTable}>
@@ -67,7 +69,9 @@ export default function MeetingAgendaTemplate(props: any) {
         </Section>
         <Section>
           <Heading>Meeting Agenda</Heading>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <div className={styles.contents}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </div>
         </Section>
       </>
     </Layout>

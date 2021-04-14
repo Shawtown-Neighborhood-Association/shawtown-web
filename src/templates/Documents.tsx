@@ -35,7 +35,6 @@ export const pageQuery = graphql`
   query GetDocument($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
-      tableOfContents
       frontmatter {
         title
       }

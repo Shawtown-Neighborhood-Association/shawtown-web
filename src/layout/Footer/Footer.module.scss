@@ -66,4 +66,71 @@ $footer-background: #262626;
       }
     }
   }
+
+  @media print {
+    display: none;
+  }
+}
+
+.printedFooter {
+  background-color: #6d6f71;
+  padding: 1rem 0;
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  display: none;
+
+  & h1 {
+    color: $color-white;
+    font-family: $secondaryFontFamily;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: none;
+
+    &::before {
+      content: '\00BB';
+      font-size: 1.5rem;
+      color: $brand-primary-green;
+      margin-right: 0.25rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .stayConnected {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 5.5rem;
+
+    a {
+      color: $color-white;
+    }
+  }
+  :global {
+    .col-sm {
+      border-right: 0.25rem solid white;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  @media print {
+    display: block;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+  }
+
+  @page {
+    @bottom-center {
+      content: element(footer);
+    }
+  }
 }

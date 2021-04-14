@@ -4,6 +4,11 @@
   background-color: #f2f2f2;
   box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.2),
     0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.12);
+
+  @media print {
+    background-color: white;
+    box-shadow: none;
+  }
 }
 
 .headingTable {
@@ -12,10 +17,45 @@
   .label {
     padding-right: 1rem;
     vertical-align: top;
+    width: 7rem;
   }
 
   .value {
     font-weight: bold;
     vertical-align: top;
+  }
+}
+
+.logo {
+  float: right;
+  width: 20rem;
+  height: 20rem;
+
+  @media print {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+
+.contents {
+  h3 {
+    font-family: $secondaryFontFamily;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $color-secondary;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-family: $primaryFontFamily;
+    font-size: 1.5rem;
+    color: $color-primary;
+    page-break-before: always;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    & + h3 {
+      margin-top: 0;
+    }
   }
 }
