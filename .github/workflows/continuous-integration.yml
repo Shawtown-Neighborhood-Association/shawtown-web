@@ -50,3 +50,4 @@ jobs:
           user_email: "github-actions@users.noreply.github.com"
           github_token: ${{ secrets.SNA_ACCESS_TOKEN_BC }}
           repository: ${{ github.repository }}
+          GATSBY_BRAD: "This time from the Step!"
