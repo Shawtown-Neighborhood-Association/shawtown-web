@@ -16,7 +16,10 @@ const IndexPage = () => {
     <Layout title="Home" description="">
       <>
         <Hero title="Shawtown Neighborhood" lead="Welcome to the" />
-
+        <Section>
+          <h1>Gatsby: {process.env.GATSBY_BRAD}</h1>
+          <h1>API: {process.env.SNA_SURVEYJS_API}</h1>
+        </Section>
         <div className="container">
           <ul>{items}</ul>
         </div>

@@ -84,4 +84,31 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
   });
+
+  // const surveyPages = await graphql(`
+  //   query GetAllSurveys {
+  //     allSurveys {
+  //       edges {
+  //         node {
+  //           id
+  //           postId
+  //           title
+  //           startDate
+  //           endDate
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+
+  // surveyPages.data.allSurveysJson.edges.forEach(({ node }) => {
+  //   const surveyPath = `/surveys/${node.id}/${slugify(node.title)}/`;
+  //   createPage({
+  //     path: surveyPath,
+  //     component: path.resolve('./src/templates/Survey.tsx'),
+  //     context: {
+  //       slug: node.id
+  //     }
+  //   });
+  // });
 };

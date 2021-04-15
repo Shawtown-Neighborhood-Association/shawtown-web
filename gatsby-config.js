@@ -7,7 +7,12 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-remark-images',
-    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-transformer-json',
+      options: {
+        typeName: ({ node, object, isArray }) => node.name
+      }
+    },
     {
       resolve: 'gatsby-plugin-mdx'
     },
