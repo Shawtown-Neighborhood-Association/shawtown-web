@@ -9,10 +9,7 @@ module.exports = {
     'gatsby-remark-images',
     'gatsby-transformer-json',
     {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        gatsbyRemarkPlugins: ['gatsby-remark-autolink-headers']
-      }
+      resolve: 'gatsby-plugin-mdx'
     },
     {
       resolve: 'gatsby-source-filesystem',
