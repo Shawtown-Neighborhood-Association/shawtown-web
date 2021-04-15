@@ -1,0 +1,20 @@
+@import '../../scss/variables';
+
+:global {
+  .sv_custom_header {
+    display: none;
+  }
+
+  .sv_main {
+    background-color: transparent;
+  }
+
+  label.btn {
+    margin-right: 0.1875rem;
+  }
+
+  .sv-boolean__switch,
+  .sv_complete_btn {
+    background-color: $color-secondary !important;
+  }
+}
