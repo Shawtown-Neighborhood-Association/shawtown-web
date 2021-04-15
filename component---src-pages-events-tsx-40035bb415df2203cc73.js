@@ -1,0 +1,2 @@
+(self.webpackChunkshawtown_neighborhood_association=self.webpackChunkshawtown_neighborhood_association||[]).push([[512],{574:function(e,n,t){"use strict";t.r(n);var o=t(7294),a=t(386),l=t(983);n.default=function(){return o.createElement(l.A,{title:"Upcoming Events",description:""},o.createElement(o.Fragment,null,o.createElement(a.$,null,o.createElement("h1",null,"Events"))))}}}]);
+//# sourceMappingURL=component---src-pages-events-tsx-40035bb415df2203cc73.js.map

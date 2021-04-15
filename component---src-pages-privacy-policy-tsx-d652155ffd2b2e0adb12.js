@@ -1,0 +1,2 @@
+(self.webpackChunkshawtown_neighborhood_association=self.webpackChunkshawtown_neighborhood_association||[]).push([[806],{9297:function(e,n,t){"use strict";t.r(n);var a=t(7294),o=t(386),c=t(983);n.default=function(){return a.createElement(c.A,{title:"Privacy Policy",description:""},a.createElement(a.Fragment,null,a.createElement(o.$,null,a.createElement("h1",null,"Privacy Policy"))))}}}]);
+//# sourceMappingURL=component---src-pages-privacy-policy-tsx-d652155ffd2b2e0adb12.js.map
