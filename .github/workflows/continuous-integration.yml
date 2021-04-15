@@ -32,6 +32,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Create env file
+        run | 
+          touch .env
+          echo GATSBY_BRAD="From .env file"
+          echo SNA_SURVEYJS_API=${{ secrets.SNA_SURVEYJS_API }} >> .env
+          cat .env
+
       - name: Build & Deploy to Github Pages
         run: |
           git config --global user.name $user_name
@@ -43,5 +50,3 @@ jobs:
           user_email: "github-actions@users.noreply.github.com"
           github_token: ${{ secrets.SNA_ACCESS_TOKEN_BC }}
           repository: ${{ github.repository }}
-          SNA_SURVEYJS_API: ${{ secrets.SNA_SURVEYJS_API }}
-          GATSBY_BRAD: "From the CI Action"
