@@ -7,8 +7,12 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-remark-images',
+    'gatsby-transformer-json',
     {
-      resolve: 'gatsby-plugin-mdx'
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: ['gatsby-remark-autolink-headers']
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -41,6 +45,14 @@ module.exports = {
         path: `${__dirname}/src/documents/`
       },
       __key: 'documents'
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data/`
+      },
+      __key: 'data'
     },
     {
       resolve: 'gatsby-plugin-google-gtag',

@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Animal Control",
+    "government": "City of Eau Claire",
+    "number": "715-839-4972",
+    "issues": [
+      "Dogs running at large (daytime)",
+      "Questions about licensing and vaccinations of dogs",
+      "Dead or injured animals",
+      "Too many animals, or unsanitary conditions"
+    ]
+  },
+  {
+    "name": "Health & Human Services",
+    "government": "Eau Claire County",
+    "number": "715-839-4918",
+    "issues": [
+      "Overflowing garbage cans or dumpsters",
+      "Maintenance and sanitation of housing",
+      "Garbage cans left out on the street for longer than a day before or after collection day",
+      "Smoking in prohibited buildings"
+    ]
+  }
+]

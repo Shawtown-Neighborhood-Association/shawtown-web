@@ -5,6 +5,7 @@ import { Section } from '../components/Section';
 import Layout from '../layout/Layout';
 
 import * as styles from './Documents.module.scss';
+import { TableOfContents } from '../components/TableOfContents';
 
 export default function DocumentTemplate(props: any) {
   const { data } = props;
@@ -15,16 +16,10 @@ export default function DocumentTemplate(props: any) {
       <>
         <Section>
           <h1>{mdx.frontmatter?.title ?? 'Document'}</h1>
-          {mdx.tableOfContents?.items && (
-            <ul>
-              {mdx.tableOfContents?.items.map((i: any) => {
-                return <li>{i.title}</li>;
-              })}
-            </ul>
-          )}
+          <TableOfContents items={mdx.tableOfContents?.items} />
         </Section>
         <Section className={styles.document}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXRenderer headings={mdx.headings}>{mdx.body}</MDXRenderer>
         </Section>
       </>
     </Layout>
@@ -37,6 +32,11 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+      }
+      tableOfContents
+      headings {
+        value
+        depth
       }
     }
   }
