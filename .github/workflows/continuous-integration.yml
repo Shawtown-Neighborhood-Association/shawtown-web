@@ -43,3 +43,5 @@ jobs:
           user_email: "github-actions@users.noreply.github.com"
           github_token: ${{ secrets.SNA_ACCESS_TOKEN_BC }}
           repository: ${{ github.repository }}
+          SNA_SURVEYJS_API: ${{ secrets.SNA_SURVEYJS_API }}
+          GATSBY_BRAD: "From the CI Action"
