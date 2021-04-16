@@ -11,7 +11,7 @@ import './Layout.scss';
 export interface LayoutProps {
   title: string;
   description: string;
-  children?: ReactChild;
+  children?: React.ReactNode;
 }
 
 export const Layout: React.FC<LayoutProps> = props => {

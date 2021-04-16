@@ -12,6 +12,12 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-remark-images',
     {
+      resolve: 'gatsby-source-surveyjs',
+      options: {
+        accessKey: `${process.env.GATSBY_KEY_SURVEYJS}`
+      }
+    },
+    {
       resolve: 'gatsby-transformer-json',
       options: {
         typeName: ({ node, object, isArray }) => node.name
@@ -73,12 +79,6 @@ module.exports = {
         short_name: 'Shawtown',
         start_url: '/',
         icon: 'src/images/icon.png'
-      }
-    },
-    {
-      resolve: 'gatsby-source-surveyjs',
-      options: {
-        accessKey: `${process.env.GATSBY_KEY_SURVEYJS}`
       }
     }
   ]

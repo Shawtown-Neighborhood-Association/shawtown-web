@@ -1,6 +1,7 @@
 const path = require('path');
 const slugify = require('slugify');
 const format = require('date-fns/format');
+const pluralize = require('pluralize');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 /**
@@ -83,5 +84,43 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       });
     }
+  });
+
+  const surveyPages = await graphql(`
+    query MyQuery {
+      allSurvey {
+        edges {
+          node {
+            Id
+            Name
+            PostId
+          }
+        }
+      }
+    }
+  `);
+
+  const motionRegex = /^Motion[\s-]{0,}/im;
+
+  surveyPages.data.allSurvey.edges.forEach(({ node }) => {
+    let surveyType = 'Survey';
+    let surveyName = node.Name;
+
+    if (motionRegex.test(node.Name)) {
+      surveyType = 'Motion';
+      surveyName = node.Name.replace(motionRegex, '');
+    }
+
+    const surveyPath = `/${pluralize(surveyType.toLowerCase())}/${node.Id}/${slugify(surveyName)}`;
+    createPage({
+      path: surveyPath,
+      component: path.resolve('./src/templates/Survey.tsx'),
+      context: {
+        surveyId: node.Id,
+        surveyPostId: node.PostId,
+        surveyName: surveyName,
+        surveyType: surveyType
+      }
+    });
   });
 };

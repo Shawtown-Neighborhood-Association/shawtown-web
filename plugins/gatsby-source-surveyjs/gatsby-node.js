@@ -30,7 +30,7 @@ exports.sourceNodes = async ({ actions, createContentDigest, createNodeId }, plu
   const activeSurveyEndpoint = `https://api.surveyjs.io/private/Surveys/getActive?accessKey=${pluginOptions.accessKey}`;
   const archivedSurveyEndpoint = `https://api.surveyjs.io/private/Surveys/getArchive?accessKey=${pluginOptions.accessKey}`;
 
-  axios
+  await axios
     .get(activeSurveyEndpoint)
     .then(response => {
       response.data.forEach(survey => {
@@ -43,7 +43,7 @@ exports.sourceNodes = async ({ actions, createContentDigest, createNodeId }, plu
     });
 
   if (pluginOptions && pluginOptions.includeArchived === true) {
-    axios
+    await axios
       .get(archivedSurveyEndpoint)
       .then(response => {
         response.data.forEach(survey => {
