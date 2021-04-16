@@ -100,18 +100,20 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  const motionRegex = /^Motion[\s-]{0,}/im;
+  const surveyTypeMatchRegex = /^(\w).*(?=\s-\s)/im;
+  const surveyTypeReplacement = /^(\w).*\s-\s/gim;
 
   surveyPages.data.allSurvey.edges.forEach(({ node }) => {
     let surveyType = 'Survey';
     let surveyName = node.Name;
 
-    if (motionRegex.test(node.Name)) {
-      surveyType = 'Motion';
-      surveyName = node.Name.replace(motionRegex, '');
+    var match = node.Name.match(surveyTypeMatchRegex);
+    if (match) {
+      surveyType = match[0];
+      surveyName = node.Name.replace(surveyTypeReplacement, '');
     }
 
-    const surveyPath = `/${pluralize(surveyType.toLowerCase())}/${node.Id}/${slugify(surveyName)}`;
+    const surveyPath = `/${slugify(pluralize(surveyType.toLowerCase()))}/${node.Id}/${slugify(surveyName)}`;
     createPage({
       path: surveyPath,
       component: path.resolve('./src/templates/Survey.tsx'),
