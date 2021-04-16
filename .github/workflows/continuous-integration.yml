@@ -35,8 +35,7 @@ jobs:
       - name: Create env file
         run: |
           touch .env.production
-          echo GATSBY_BRAD="From .env file" >> .env.production
-          echo SNA_SURVEYJS_API=${{ secrets.SNA_SURVEYJS_API }} >> .env.production
+          echo GATSBY_KEY_SURVEYJS=${{ secrets.GATSBY_KEY_SURVEYJS }} >> .env.production
           cat .env.production
 
       - name: Build & Deploy to Github Pages
@@ -50,4 +49,3 @@ jobs:
           user_email: "github-actions@users.noreply.github.com"
           github_token: ${{ secrets.SNA_ACCESS_TOKEN_BC }}
           repository: ${{ github.repository }}
-          GATSBY_BRAD: "This time from the Step!"

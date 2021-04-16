@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Shawtown Neighborhood Association'
@@ -70,10 +74,12 @@ module.exports = {
         start_url: '/',
         icon: 'src/images/icon.png'
       }
+    },
+    {
+      resolve: 'gatsby-source-surveyjs',
+      options: {
+        accessKey: `${process.env.GATSBY_KEY_SURVEYJS}`
+      }
     }
   ]
 };
-
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
-});
