@@ -1,0 +1,2 @@
+(self.webpackChunkshawtown_neighborhood_association=self.webpackChunkshawtown_neighborhood_association||[]).push([[317],{3244:function(e,t,n){"use strict";n.r(t);var o=n(7294),a=n(386),r=n(983);t.default=function(){return o.createElement(r.A,{title:"Projects",description:""},o.createElement(o.Fragment,null,o.createElement(a.$,null,o.createElement("h1",null,"Projects"))))}}}]);
+//# sourceMappingURL=component---src-pages-projects-tsx-3380f4900aa1c504515d.js.map
