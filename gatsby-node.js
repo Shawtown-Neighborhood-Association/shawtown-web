@@ -121,7 +121,8 @@ exports.createPages = async ({ graphql, actions }) => {
         surveyId: node.Id,
         surveyPostId: node.PostId,
         surveyName: surveyName,
-        surveyType: surveyType
+        surveyType: surveyType,
+        surveySource: 'SurveyJS'
       }
     });
   });
