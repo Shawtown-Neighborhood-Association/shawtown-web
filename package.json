@@ -39,6 +39,7 @@
     "gatsby-remark-autolink-headers": "3.2.0",
     "gatsby-remark-images": "4.1.1",
     "gatsby-source-filesystem": "^3.2.0",
+    "gatsby-source-surveyjs": "1.5.1",
     "gatsby-transformer-json": "^3.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -50,6 +51,7 @@
   },
   "devDependencies": {
     "@types/classnames": "^2.2.11",
+    "@types/mdx-js__react": "^1.5.3",
     "@types/node": "^12.12.11",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",

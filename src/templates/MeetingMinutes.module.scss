@@ -1,0 +1,14 @@
+@import '../scss/variables';
+
+.minutes {
+  h2 {
+    color: $color-primary;
+    font-size: 1.25rem;
+  }
+  h3 {
+    color: $color-secondary;
+    font-size: 1.05rem;
+    font-family: $secondaryFontFamily;
+    font-weight: bold;
+  }
+}
