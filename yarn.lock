@@ -6114,10 +6114,10 @@ gatsby-source-filesystem@^3.2.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-source-surveyjs@1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-surveyjs/-/gatsby-source-surveyjs-1.5.1.tgz#44c74ff7e69126670aa010d8059c9f4e7524e617"
-  integrity sha512-qs8kjBSyvkGiUzM8J7C6JA5YdAHuT4fT3kAG1FE+jb4+pFd2DkYrBshZEQ5Bk7i450JeWhtACVw/NenSufvykA==
+gatsby-source-surveyjs@1.5.6:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/gatsby-source-surveyjs/-/gatsby-source-surveyjs-1.5.6.tgz#5322a57260a3151e4596f89af023a956e9f44ff2"
+  integrity sha512-qJu01jxRcuZMM0hxwqQb3gygtA3y8vd03VeIz7CUozuG9LZjIFTOjn5HjzwxdH15lTsiZy9lCfT6iT4tlXcGQA==
   dependencies:
     "@babel/runtime" "^7.6.3"
     axios "^0.21.1"

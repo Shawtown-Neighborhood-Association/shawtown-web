@@ -39,7 +39,7 @@
     "gatsby-remark-autolink-headers": "3.2.0",
     "gatsby-remark-images": "4.1.1",
     "gatsby-source-filesystem": "^3.2.0",
-    "gatsby-source-surveyjs": "1.5.1",
+    "gatsby-source-surveyjs": "1.5.6",
     "gatsby-transformer-json": "^3.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
