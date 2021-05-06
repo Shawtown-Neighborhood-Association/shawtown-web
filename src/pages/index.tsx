@@ -1,6 +1,4 @@
-import { relative } from 'node:path';
-import * as React from 'react';
-import { Heading } from '../components/Heading';
+import React from 'react';
 import { Hero } from '../components/Hero';
 import { Section } from '../components/Section';
 import { Layout } from '../layout/Layout';
@@ -17,12 +15,8 @@ const IndexPage = () => {
       <>
         <Hero title="Shawtown Neighborhood" lead="Welcome to the" />
         <Section>
-          <h1>Gatsby: {process.env.GATSBY_BRAD}</h1>
-          <h1>API: {process.env.SNA_SURVEYJS_API}</h1>
-        </Section>
-        <div className="container">
           <ul>{items}</ul>
-        </div>
+        </Section>
       </>
     </Layout>
   );

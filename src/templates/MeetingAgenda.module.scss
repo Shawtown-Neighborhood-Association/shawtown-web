@@ -58,4 +58,12 @@
       margin-top: 0;
     }
   }
+
+  h4 {
+    font-family: $secondaryFontFamily;
+    font-size: 1rem;
+    font-weight: bold;
+    color: $color-secondary;
+    margin-top: 2rem;
+  }
 }

@@ -36,34 +36,51 @@ export default function MeetingAgendaTemplate(props: any) {
               </tr>
               <tr>
                 <td className={styles.label}>Location:</td>
-                <td className={styles.value}>{mdx.frontmatter.location}</td>
-              </tr>
-              <tr>
-                <td colSpan={2}>&nbsp;</td>
-              </tr>
-              <tr>
-                <td className={styles.label}>Meeting ID:</td>
-                <td className={styles.value}>{mdx.frontmatter.meetingID}</td>
-              </tr>
-              <tr>
-                <td className={styles.label}>Passcode:</td>
-                <td className={styles.value}>{mdx.frontmatter.meetingPasscode}</td>
-              </tr>
-              <tr>
-                <td className={styles.label}>Connect via:</td>
                 <td className={styles.value}>
-                  Voice / Phone:{' '}
-                  <a href={`tel:${mdx.frontmatter.meetingPhone.replace(' ', '')}`}>{mdx.frontmatter.meetingPhone}</a>
+                  {mdx.frontmatter.location}
+                  {mdx.frontmatter.address && (
+                    <>
+                      <br />
+                      {mdx.frontmatter.address}
+                      <br />
+                      {mdx.frontmatter.city}, {mdx.frontmatter.state} {mdx.frontmatter.postalCode}
+                    </>
+                  )}
                 </td>
               </tr>
-              <tr>
-                <td></td>
-                <td className={styles.value}>
-                  Computer / Smartphone / Tablet
-                  <br />
-                  <a href={mdx.frontmatter.meetingUrl}>{mdx.frontmatter.meetingUrl}</a>
-                </td>
-              </tr>
+              {mdx.frontmatter.meetingID && (
+                <>
+                  <tr>
+                    <td colSpan={2}>&nbsp;</td>
+                  </tr>
+
+                  <tr>
+                    <td className={styles.label}>Meeting ID:</td>
+                    <td className={styles.value}>{mdx.frontmatter.meetingID}</td>
+                  </tr>
+                  <tr>
+                    <td className={styles.label}>Passcode:</td>
+                    <td className={styles.value}>{mdx.frontmatter.meetingPasscode}</td>
+                  </tr>
+                  <tr>
+                    <td className={styles.label}>Connect via:</td>
+                    <td className={styles.value}>
+                      Voice / Phone:{' '}
+                      <a href={`tel:${mdx.frontmatter.meetingPhone.replace(' ', '')}`}>
+                        {mdx.frontmatter.meetingPhone}
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td className={styles.value}>
+                      Computer / Smartphone / Tablet
+                      <br />
+                      <a href={mdx.frontmatter.meetingUrl}>{mdx.frontmatter.meetingUrl}</a>
+                    </td>
+                  </tr>
+                </>
+              )}
             </tbody>
           </table>
         </Section>
@@ -91,6 +108,10 @@ export const pageQuery = graphql`
         meetingPhone
         meetingUrl
         author
+        address
+        city
+        state
+        postalCode
       }
       body
     }
